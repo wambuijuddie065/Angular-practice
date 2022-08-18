@@ -1,0 +1,31 @@
+
+
+.container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100vh;
+    width: 70vw;
+    margin: 20px;
+    padding: 10px;
+    
+    align-items: center;
+   
+}
+.content img{
+    height: 150px;
+    width: 200px;
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px coral;
+    padding: 10px;
+    align-items: center;
+    height: fit-content;
+}
+.color-white{
+    color: white;
+}

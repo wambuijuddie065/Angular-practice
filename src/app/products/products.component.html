@@ -1,0 +1,28 @@
+<div [ngSwitch]="day">
+    <p *ngSwitchCase="1">MONDAY</p>
+    <p *ngSwitchCase="2">TUESDAY</p>
+    <p *ngSwitchCase="3">WEDNESDAY</p>
+    <p *ngSwitchCase="4">THURSDAY</p>
+    <p *ngSwitchCase="5">FRIDAY</p>
+    <p *ngSwitchCase="6">SATURDAY</p>
+    <p *ngSwitchCase="7">SUNDAY</p>
+    <p *ngSwitchDefault="">NO DAY</p>
+
+</div>
+<div  *ngIf="products.length; else noproduct" class="container" >
+    <div *ngFor="let product of products;let i=index">
+        <div  class="content"  [ngStyle]="{'backgroundColor':!product.inStock? 'coral':''}" 
+        [ngClass]="{'color-white':!product.inStock}">
+            
+            <img [src]="product.url" alt="">
+            <p>{{product.name}}</p>
+            <p>{{product.sellingPrice}}</p>
+            <p>{{i}}</p>
+        </div>
+    </div>
+ 
+
+</div>
+<ng-template #noproduct>
+    <p><i>You do not have any products!!!</i></p>
+</ng-template>
