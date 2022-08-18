@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ProductsComponent } from './products/products.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DirectivesComponent } from './directives/directives.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

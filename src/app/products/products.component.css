@@ -29,3 +29,17 @@
 .color-white{
     color: white;
 }
+.form{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    
+}
+.form input{
+    
+    width: 200px;
+    height: 30px;
+    align-self: center;
+   
+}

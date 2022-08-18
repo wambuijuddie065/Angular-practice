@@ -9,8 +9,14 @@
     <p *ngSwitchDefault="">NO DAY</p>
 
 </div>
-<div  *ngIf="products.length; else noproduct" class="container" >
-    <div *ngFor="let product of products;let i=index">
+<div class="form">
+    <input [(ngModel)]="name" type="text" placeholder="Product name">
+    <input [(ngModel)]="url" type="text" placeholder="Url">
+    <input [(ngModel)]="price" type="number" placeholder="Price">
+    <button (click)="onAdd()">ADD PRODUCT</button>
+</div>
+<div  *ngIf="productsArr.length; else noproduct" class="container" >
+    <div *ngFor="let product of productsArr;let i=index">
         <div  class="content"  [ngStyle]="{'backgroundColor':!product.inStock? 'coral':''}" 
         [ngClass]="{'color-white':!product.inStock}">
             

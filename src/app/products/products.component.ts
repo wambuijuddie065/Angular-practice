@@ -9,7 +9,7 @@ import { ProductInterface } from '../interfaces';
 export class ProductsComponent  {
 
   constructor() { }
-  products:ProductInterface[]=[
+  productsArr:ProductInterface[]=[
 
     {
       name:"Laptop",
@@ -55,6 +55,19 @@ export class ProductsComponent  {
     }
     
   ]
+  
+  name:string=''
+  url:string=''
+  price:number=0
+  onAdd(){
+    this.productsArr.push({
+      name:this.name,
+      url:this.url,
+      sellingPrice:this.price,
+      inStock:true
+    })
+
+  }
   day=new Date().getDay()
 
  
